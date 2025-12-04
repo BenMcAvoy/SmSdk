@@ -9,6 +9,8 @@
 #include <DirectXMath.h>
 #include <functional>
 
+SMSDK_BEGIN_NAMESPACE
+
 class PaintToolNetworkData : public IToolNetworkData
 {
 public:
@@ -79,3 +81,5 @@ public:
 }; // Size: 0x6F0
 
 static_assert(sizeof(PaintTool) == 0x6F0, "PaintTool: Incorrect Size");
+
+SMSDK_END_NAMESPACE

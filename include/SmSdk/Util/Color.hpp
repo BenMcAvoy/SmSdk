@@ -2,6 +2,9 @@
 
 #include <string>
 #include <cmath>
+#include "SmSdk/config.hpp"
+
+SMSDK_BEGIN_NAMESPACE
 
 union Color;
 
@@ -56,3 +59,5 @@ union Color
 
 void RGBtoHSV(Color col, float& fH, float& fS, float& fV);
 uint32_t RatioToRGB(double dRatio);
+
+SMSDK_END_NAMESPACE

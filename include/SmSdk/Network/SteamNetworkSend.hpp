@@ -1,7 +1,10 @@
 #pragma once
 
 #include "SmSdk/steamapi_include.hpp"
+#include "SmSdk/config.hpp"
 #include <unordered_map>
+
+SMSDK_BEGIN_NAMESPACE
 
 struct NetworkSendInterface
 {
@@ -33,3 +36,5 @@ public:
 }; // Size: 0x128
 
 static_assert(sizeof(SteamNetworkSend) == 0x128, "SteamNetworkSend: Incorrect Size");
+
+SMSDK_END_NAMESPACE

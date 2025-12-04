@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct LayoutParameter
 {
 public:
@@ -62,3 +64,5 @@ static_assert(offsetof(Material, Material::m_pLayout) == 0x90, "Material::m_pLay
 static_assert(offsetof(Material, Material::m_pShaderProgram) == 0x98, "Material::m_pShaderProgram: Incorrect offset");
 
 static_assert(sizeof(Material) == 0xA0, "Material: Incorrect Size");
+
+SMSDK_END_NAMESPACE

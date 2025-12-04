@@ -1,4 +1,7 @@
 #include "SmSdk/Util/Color.hpp"
+#include "SmSdk/config.hpp"
+
+SMSDK_USE_NAMESPACE
 
 ColorBGRA::ColorBGRA(Color color)
     : b(color.b), g(color.g), r(color.r), a(color.a) {}

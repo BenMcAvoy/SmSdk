@@ -10,6 +10,8 @@
 #include <unordered_map>
 #include <vector>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct AreaTrigger
 {
 	/* 0x0000 */ std::int32_t m_iId;
@@ -94,3 +96,5 @@ static_assert(offsetof(AreaTriggerManager, AreaTriggerManager::m_mapAreaTriggerW
 static_assert(offsetof(AreaTriggerManager, AreaTriggerManager::m_vecAreaTriggers) == 0x98, "AreaTriggerManager::m_vecAreaTriggers: Incorrect offset");
 
 static_assert(sizeof(AreaTriggerManager) == 0xC0, "AreaTriggerManager: Incorrect Size");
+
+SMSDK_END_NAMESPACE

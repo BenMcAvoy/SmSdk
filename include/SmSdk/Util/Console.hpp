@@ -9,6 +9,10 @@
 #include <string>
 #include <mutex>
 
+#include "SmSdk/config.hpp"
+
+SMSDK_BEGIN_NAMESPACE
+
 namespace UTILS
 {
 class Contraption;
@@ -107,3 +111,5 @@ private:
 
 #define LOG_ERROR(...) UTILS::Console::GetInstance()->logVariadic(FOREGROUND_RED | FOREGROUND_INTENSITY, UTILS::ConsoleLogType_Error, __VA_ARGS__)
 #define LOG_WARNING(...) UTILS::Console::GetInstance()->logVariadic(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY, UTILS::ConsoleLogType_Warning, __VA_ARGS__)
+
+SMSDK_END_NAMESPACE

@@ -9,6 +9,8 @@
 #include <deque>
 #include <map>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct EventData
 {
 	/* 0x0000 */ std::int16_t m_iWorldId;
@@ -78,3 +80,5 @@ private:
 }; // Size: 0x2D8
 
 static_assert(sizeof(AudioManager) == 0x2D8, "AudioManager: Incorrect Size");
+
+SMSDK_END_NAMESPACE

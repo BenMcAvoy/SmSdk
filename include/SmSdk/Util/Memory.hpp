@@ -8,6 +8,10 @@
 #include <cstdint>
 #include <memory>
 
+#include "SmSdk/config.hpp"
+
+SMSDK_BEGIN_NAMESPACE
+
 namespace Memory
 {
 inline static std::uintptr_t ToLocalAddress(const void* pPtr)
@@ -58,3 +62,5 @@ inline static void OverwriteVftable(void* pObj, std::uintptr_t uVtblOffset)
 	*reinterpret_cast<void**>(pObj) = Memory::ReadPtr<void>(uVtblOffset);
 }
 }
+
+SMSDK_END_NAMESPACE

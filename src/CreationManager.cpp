@@ -1,4 +1,7 @@
 #include "SmSdk/Creation/CreationManager.hpp"
+#include "SmSdk/config.hpp"
+
+SMSDK_USE_NAMESPACE
 
 BodyStructure* CreationManager::_getBodyData(int id)
 {

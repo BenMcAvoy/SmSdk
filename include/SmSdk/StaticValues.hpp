@@ -3,6 +3,8 @@
 #include "SmSdk/Util/StaticVariable.hpp"
 #include "SmSdk/offsets.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class StaticValues
 {
 public:
@@ -17,3 +19,5 @@ public:
 	// A limiter for build size
 	static BlockBuildLimiterType sm_blockBuildLimiter;
 };
+
+SMSDK_END_NAMESPACE

@@ -10,6 +10,8 @@
 
 #include <memory>
 
+SMSDK_BEGIN_NAMESPACE
+
 enum EGameStateType : uint32_t
 {
 	GameState_Null = 0,
@@ -111,3 +113,5 @@ static_assert(offsetof(LoadState, LoadState::m_pPrevState) == 0x130, "LoadState:
 static_assert(offsetof(LoadState, LoadState::m_pLoadingScreen) == 0x140, "LoadState::m_pLoadingScreen: Incorrect offset");
 
 static_assert(sizeof(LoadState) == 0x158, "LoadState: Incorrect Size");
+
+SMSDK_END_NAMESPACE

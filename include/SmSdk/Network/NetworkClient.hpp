@@ -6,6 +6,8 @@
 #include <memory>
 #include <string>
 
+SMSDK_BEGIN_NAMESPACE
+
 class NetworkClient
 {
 private:
@@ -32,3 +34,5 @@ public:
 }; // Size: 0x130
 
 static_assert(sizeof(NetworkClient) == 0x130, "NetworkClient: Incorrect Size");
+
+SMSDK_END_NAMESPACE

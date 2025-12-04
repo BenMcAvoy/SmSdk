@@ -13,6 +13,9 @@
 // TODO: This could be fixed by implementing the hash function that Boost uses internally for our stub
 //#define SMSDK_ENABLE_BOOST
 
+// You can optionally wrap everything into a namespace
+#define SMSDK_NAMESPACE SM
+
 #include <cstdint>
 #include <cstddef>
 
@@ -38,3 +41,13 @@ struct PassthroughHash
 		return val;
 	}
 };
+
+#ifdef SMSDK_NAMESPACE
+#define SMSDK_BEGIN_NAMESPACE namespace SMSDK_NAMESPACE {
+#define SMSDK_END_NAMESPACE }
+#define SMSDK_USE_NAMESPACE using namespace SMSDK_NAMESPACE;
+#else
+#define SMSDK_BEGIN_NAMESPACE
+#define SMSDK_END_NAMESPACE
+#define SMSDK_USE_NAMESPACE
+#endif

@@ -9,6 +9,8 @@
 #include <memory>
 #include <map>
 
+SMSDK_BEGIN_NAMESPACE
+
 class GuiSystemManager
 {
 public:
@@ -105,3 +107,5 @@ static_assert(offsetof(GuiSystemManager, GuiSystemManager::m_bMouseState) == 0x1
 static_assert(offsetof(GuiSystemManager, GuiSystemManager::m_bMouseVisible) == 0x1E1, "GuiSystemManager::m_bMouseVisible: Incorrect offset");
 
 static_assert(sizeof(GuiSystemManager) == 0x1E8, "GuiSystemManager: Incorrect Size");
+
+SMSDK_END_NAMESPACE

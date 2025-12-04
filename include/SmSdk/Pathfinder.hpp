@@ -1,5 +1,9 @@
 #pragma once
 
+#include "SmSdk/config.hpp"
+
+#include "SmSdk/Base/NetObj.hpp"
+
 struct PathNode : public NetObj
 {
 private:
@@ -35,3 +39,5 @@ static_assert(offsetof(Pathfinder, Pathfinder::m_mapPathNodes) == 0x0, "Pathfind
 static_assert(offsetof(Pathfinder, Pathfinder::m_vecPathNodes) == 0x40, "Pathfinder::m_vecPathNodes: Incorrect offset");
 
 static_assert(sizeof(Pathfinder) == 0xA0, "Pathfinder: Incorrect Size");
+
+SMSDK_END_NAMESPACE

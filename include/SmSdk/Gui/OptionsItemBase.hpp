@@ -2,6 +2,8 @@
 
 #include "SmSdk/mygui_include.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class OptionsItemBase
 {
 public:
@@ -16,3 +18,5 @@ public:
 static_assert(offsetof(OptionsItemBase, OptionsItemBase::m_pBaseWidget) == 0x8, "OptionsItemBase::m_pBaseWidget: Incorrect offset");
 
 static_assert(sizeof(OptionsItemBase) == 0x10, "OptionsItemBase: Incorrect Size");
+
+SMSDK_END_NAMESPACE

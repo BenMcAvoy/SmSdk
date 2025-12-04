@@ -2,6 +2,9 @@
 #include "SmSdk/Gui/GuiSystemManager.hpp"
 
 #include "SmSdk/unreferenced_params.hpp"
+#include "SmSdk/config.hpp"
+
+SMSDK_USE_NAMESPACE
 
 #if defined(SMSDK_ENABLE_MYGUI)
 

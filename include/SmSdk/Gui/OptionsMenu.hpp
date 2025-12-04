@@ -5,6 +5,8 @@
 #include "SmSdk/Gui/RadioButtonSet.hpp"
 #include "SmSdk/Gui/GuiBase.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class OptionsMenu : public GuiBase
 {
 public:
@@ -31,3 +33,5 @@ static_assert(offsetof(OptionsMenu, OptionsMenu::m_pCurrentTab) == 0x48, "Option
 static_assert(offsetof(OptionsMenu, OptionsMenu::m_mapSubMenus) == 0x58, "OptionsMenu::m_mapSubMenus: Incorrect offset");
 
 static_assert(sizeof(OptionsMenu) == 0x68, "OptionsMenu: Incorrect Size");
+
+SMSDK_END_NAMESPACE

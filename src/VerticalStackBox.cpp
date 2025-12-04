@@ -5,6 +5,8 @@
 #include "SmSdk/Util/Memory.hpp"
 #include "SmSdk/offsets.hpp"
 
+SMSDK_USE_NAMESPACE
+
 #if defined(SMSDK_ENABLE_MYGUI)
 
 VerticalStackBox::VerticalStackBox(MyGUI::IntSize item_sz) : m_itemSize(item_sz),

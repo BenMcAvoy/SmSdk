@@ -3,6 +3,8 @@
 #include "SmSdk/Gui/CompoundButton.hpp"
 #include "SmSdk/Gui/GuiBase.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class MainMenuRootGui : public GuiBase
 {
 private:
@@ -22,7 +24,6 @@ public:
 	/* 0x0090 */ struct CustomGameModeMenu* m_pCustomGameModeMenu;
 	/* 0x0098 */ struct CharacterCustomizationMenu* m_pCharacterCustomizationMenu;
 	/* 0x00A0 */ class OptionsMenu* m_pOptionsMenu;
-
 }; // Size: 0xA8
 
 static_assert(offsetof(MainMenuRootGui, MainMenuRootGui::m_pMenuState) == 0x20, "MainMenuRootGui::m_pMenuState: Incorrect offset");
@@ -38,3 +39,5 @@ static_assert(offsetof(MainMenuRootGui, MainMenuRootGui::m_pCharacterCustomizati
 static_assert(offsetof(MainMenuRootGui, MainMenuRootGui::m_pOptionsMenu) == 0xA0, "MainMenuRootGui::m_pOptionsMenu: Incorrect offset");
 
 static_assert(sizeof(MainMenuRootGui) == 0xA8, "MainMenuRootGui: Incorrect Size");
+
+SMSDK_END_NAMESPACE

@@ -3,6 +3,8 @@
 #include <unordered_map>
 #include <string>
 
+SMSDK_BEGIN_NAMESPACE
+
 class GameSettings
 {
 public:
@@ -57,3 +59,5 @@ static_assert(offsetof(GameSettings, GameSettings::m_mapStringSettings) == 0x80,
 static_assert(offsetof(GameSettings, GameSettings::m_appliedSettings) == 0xC0, "GameSettings::m_appliedSettings: Incorrect offset");
 
 static_assert(sizeof(GameSettings) == 0xC8, "GameSettings: Incorrect Size");
+
+SMSDK_END_NAMESPACE

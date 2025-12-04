@@ -5,6 +5,8 @@
 
 #include <memory>
 
+SMSDK_BEGIN_NAMESPACE
+
 class RigidBody;
 
 class ChildShape : public NetObj
@@ -42,3 +44,5 @@ private:
 }; // Size: 0x00D0
 
 static_assert(sizeof(ChildShape) == 0xD0, "ChildShape: Incorrect Size");
+
+SMSDK_END_NAMESPACE

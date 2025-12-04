@@ -1,6 +1,9 @@
 #pragma once
 
+#include "SmSdk/config.hpp"
 #include "SteamNetworkServer.hpp"
+
+SMSDK_BEGIN_NAMESPACE
 
 struct ListenServer
 {
@@ -10,3 +13,5 @@ private:
 }; // Size: 0x1C0
 
 static_assert(sizeof(ListenServer) == 0x1C0, "ListenServer: Incorrect Size");
+
+SMSDK_END_NAMESPACE

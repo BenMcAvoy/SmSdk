@@ -5,6 +5,8 @@
 #include <cstddef>
 #include <cstdint>
 
+SMSDK_BEGIN_NAMESPACE
+
 template <typename T, std::uintptr_t uStaticOffset>
 class StaticVariable
 {
@@ -32,3 +34,5 @@ public:
 		return *Memory::ReadPtr<T>(uStaticOffset);
 	}
 };
+
+SMSDK_END_NAMESPACE

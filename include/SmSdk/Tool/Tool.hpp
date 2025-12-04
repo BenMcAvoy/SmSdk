@@ -5,6 +5,8 @@
 
 #include "SmSdk/Base/NetObj.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class Tool : public NetObj
 {
 public:
@@ -25,3 +27,5 @@ private:
 }; // Size: 0x70
 
 static_assert(sizeof(Tool) == 0x70, "Tool: Incorrect Size");
+
+SMSDK_END_NAMESPACE

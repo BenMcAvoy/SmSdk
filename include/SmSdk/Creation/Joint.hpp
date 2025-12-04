@@ -3,6 +3,8 @@
 #include "SmSdk/Base/NetObj.hpp"
 #include "SmSdk/Util/Color.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 struct Joint : public NetObj
 {
 private:
@@ -22,3 +24,5 @@ private:
 }; // Size: 0xE0
 
 static_assert(sizeof(Joint) == 0xE0, "Joint: Incorrect Size");
+
+SMSDK_END_NAMESPACE

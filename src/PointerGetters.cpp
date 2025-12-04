@@ -24,6 +24,8 @@
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
 
+SMSDK_USE_NAMESPACE
+
 //A file that contains all the offsets
 #include "SmSdk/offsets.hpp"
 

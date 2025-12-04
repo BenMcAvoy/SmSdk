@@ -2,6 +2,9 @@
 
 #include "SmSdk/Network/SteamNetworkSend.hpp"
 #include "SmSdk/Network/NetworkClient.hpp"
+#include "SmSdk/config.hpp"
+
+SMSDK_BEGIN_NAMESPACE
 
 struct SteamNetworkClient : public NetworkClient
 {
@@ -22,3 +25,5 @@ private:
 }; // Size: 0x230
 
 static_assert(sizeof(SteamNetworkClient) == 0x230, "SteamNetworkClient: Incorrect Size");
+
+SMSDK_END_NAMESPACE

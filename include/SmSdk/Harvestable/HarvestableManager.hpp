@@ -6,6 +6,8 @@
 #include <unordered_map>
 #include <memory>
 
+SMSDK_BEGIN_NAMESPACE
+
 class HarvestableManager
 {
 	REMOVE_COPY_CONSTRUCTORS(HarvestableManager);
@@ -46,3 +48,5 @@ private:
 }; // Size: 0x1A0
 
 static_assert(sizeof(HarvestableManager) == 0x1A0, "HarvestableManager: Incorrect Size");
+
+SMSDK_END_NAMESPACE

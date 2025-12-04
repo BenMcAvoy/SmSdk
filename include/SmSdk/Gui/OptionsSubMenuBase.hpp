@@ -10,6 +10,8 @@
 
 #include <vector>
 
+SMSDK_BEGIN_NAMESPACE
+
 class OptionsSubMenuBase
 {
 public:
@@ -79,3 +81,5 @@ static_assert(offsetof(OptionsSubMenuBase, OptionsSubMenuBase::m_iScrollValue) =
 static_assert(offsetof(OptionsSubMenuBase, OptionsSubMenuBase::m_containerPos) == 0x15C, "OptionsSubMenuBase::m_containerPos: Incorrect offset");
 
 static_assert(sizeof(OptionsSubMenuBase) == 0x168, "OptionsSubMenuBase: Incorrect Size");
+
+SMSDK_END_NAMESPACE

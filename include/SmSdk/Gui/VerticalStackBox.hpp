@@ -2,6 +2,8 @@
 
 #include "SmSdk/mygui_include.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class VerticalStackBox
 {
 public:
@@ -55,3 +57,5 @@ static_assert(offsetof(VerticalStackBox, VerticalStackBox::m_vecWidgets) == 0x60
 static_assert(offsetof(VerticalStackBox, VerticalStackBox::m_separatorColor) == 0x78, "VerticalStackBox::m_separatorColor: Incorrect offset");
 
 static_assert(sizeof(VerticalStackBox) == 0x88, "VerticalStackBox: Incorrect Size");
+
+SMSDK_END_NAMESPACE

@@ -5,6 +5,8 @@
 #include "SmSdk/Util/Memory.hpp"
 #include "SmSdk/offsets.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class AudioOptionsMenu : public OptionsSubMenuBase
 {
 public:
@@ -19,3 +21,5 @@ public:
 }; // Size: 0x168
 
 static_assert(sizeof(AudioOptionsMenu) == 0x168, "AudioOptionsMenu: Incorrect Size");
+
+SMSDK_END_NAMESPACE

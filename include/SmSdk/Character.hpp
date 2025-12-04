@@ -11,6 +11,8 @@
 #include <memory>
 #include <string>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct CharacterScriptData
 {
 	/* 0x0000 */ bool m_bHasClientOnGraphicsLoaded;
@@ -334,7 +336,7 @@ public:
 private:
 	/* 0x0064 */ char pad_0x64[0x4];
 public:
-	/* 0x0068 */ std::vector<std::string> m_animationList;
+	/* 0x0068 */ std::vector<std::string> m_vecAnimations;
 	/* 0x0080 */ DirectX::XMFLOAT3 m_spawnPosition;
 private:
 	/* 0x008C */ char pad_0x8C[0x1C];
@@ -371,13 +373,13 @@ private:
 	/* 0x0144 */ char pad_0x144[0xC];
 public:
 	/* 0x0150 */ boost::uuids::uuid m_selectedToolUuid;
-	/* 0x0160 */ std::int32_t m_selectedToolId;
+	/* 0x0160 */ std::int32_t m_iSelectedToolId;
 	/* 0x0164 */ boost::uuids::uuid m_prevSelectedToolUuid;
-	/* 0x0174 */ std::int32_t m_prevSelectedToolId;
+	/* 0x0174 */ std::int32_t m_iPrevSelectedToolId;
 private:
 	/* 0x0178 */ char pad_0x178[0x2];
 public:
-	/* 0x017A */ std::int8_t m_crouchState;
+	/* 0x017A */ std::int8_t m_iCrouchState;
 private:
 	/* 0x017B */ char pad_0x17B[0x1D];
 public:
@@ -409,7 +411,7 @@ private:
 public:
 	/* 0x02C0 */ std::string m_scriptPath;
 	/* 0x02E0 */ std::string m_scriptClass;
-	/* 0x0300 */ std::int32_t m_scriptRef;
+	/* 0x0300 */ std::int32_t m_iScriptRef;
 private:
 	/* 0x0304 */ char pad_0x304[0x8];
 public:
@@ -427,10 +429,12 @@ private:
 	/* 0x0391 */ char pad_0x391[0x3];
 public:
 	/* 0x0394 */ DirectX::XMFLOAT4 m_nameTagColor;
-	/* 0x03A4 */ float m_nameTagFadeDistance;
-	/* 0x03A8 */ float m_nameTagRenderDistance;
-	/* 0x03AC */ std::int32_t m_nameTagUpdateCounter;
+	/* 0x03A4 */ float m_fNameTagFadeDistance;
+	/* 0x03A8 */ float m_fNameTagRenderDistance;
+	/* 0x03AC */ std::int32_t m_iNameTagUpdateCounter;
 }; // Size: 0x3B0
 
 static_assert(sizeof(Character) == 0x3B0, "Character: Incorrect Size");
 #endif
+
+SMSDK_END_NAMESPACE

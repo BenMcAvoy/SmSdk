@@ -5,6 +5,8 @@
 #include <unordered_map>
 #include <memory>
 
+SMSDK_BEGIN_NAMESPACE
+
 class PlayerManager
 {
 public:
@@ -57,3 +59,5 @@ private:
 }; // Size: 0x148
 
 static_assert(sizeof(PlayerManager) == 0x148, "PlayerManager: Incorrect Size");
+
+SMSDK_END_NAMESPACE

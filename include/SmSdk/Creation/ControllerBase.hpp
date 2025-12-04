@@ -8,6 +8,8 @@
 #include <string>
 #include <map>
 
+SMSDK_BEGIN_NAMESPACE
+
 enum ControllerType : uint32_t
 {
 	ControllerType_Null = 0x0,
@@ -62,3 +64,5 @@ private:
 }; // Size: 0xE0
 
 static_assert(sizeof(ControllerBase) == 0xE0, "ControllerBase: Incorrect Size");
+
+SMSDK_END_NAMESPACE

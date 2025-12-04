@@ -7,6 +7,8 @@
 
 #include <string>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct OptionsItemDropDown;
 
 class GraphicsOptionsMenu : public OptionsSubMenuBase
@@ -50,3 +52,5 @@ static_assert(offsetof(GraphicsOptionsMenu, GraphicsOptionsMenu::m_pTexFiltering
 static_assert(offsetof(GraphicsOptionsMenu, GraphicsOptionsMenu::m_pParticleQualityDropdown) == 0x200, "GraphicsOptionsMenu::m_pParticleQualityDropdown: Incorrect offset");
 static_assert(offsetof(GraphicsOptionsMenu, GraphicsOptionsMenu::m_vecQualityLevelLabels) == 0x210, "GraphicsOptionsMenu::m_vecQualityLevelLabels: Incorrect offset");
 static_assert(sizeof(GraphicsOptionsMenu) == 0x248, "GraphicsOptionsMenu: Incorrect Size");
+
+SMSDK_END_NAMESPACE

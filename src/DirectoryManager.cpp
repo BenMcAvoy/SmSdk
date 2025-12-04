@@ -1,4 +1,7 @@
 #include "SmSdk/DirectoryManager.hpp"
+#include "SmSdk/config.hpp"
+
+SMSDK_USE_NAMESPACE
 
 bool DirectoryManager::getReplacement(const std::string& key, std::string& replacement)
 {

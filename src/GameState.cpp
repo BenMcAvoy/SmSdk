@@ -1,4 +1,7 @@
 #include "SmSdk/GameState.hpp"
+#include "SmSdk/config.hpp"
+
+SMSDK_USE_NAMESPACE
 
 bool GameState::IsCurrentGameState(EGameStateType gsType)
 {

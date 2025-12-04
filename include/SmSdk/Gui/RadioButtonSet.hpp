@@ -8,6 +8,8 @@
 #include <functional>
 #include <vector>
 
+SMSDK_BEGIN_NAMESPACE
+
 class RadioButtonSet
 {
 public:
@@ -24,3 +26,5 @@ private:
 }; // Size: 0x60
 
 static_assert(sizeof(RadioButtonSet) == 0x60, "RadioButtonSet: Incorrect Size");
+
+SMSDK_END_NAMESPACE

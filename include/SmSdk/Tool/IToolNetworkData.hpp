@@ -1,5 +1,9 @@
 #pragma once
 
+#include "SmSdk/config.hpp"
+
+SMSDK_BEGIN_NAMESPACE
+
 class IToolNetworkData
 {
 public:
@@ -10,3 +14,5 @@ public:
 
 static_assert(offsetof(IToolNetworkData, IToolNetworkData::m_bDataChanged) == 0x8, "IToolNetworkData::m_bDataChanged: Incorrect offset");
 static_assert(sizeof(IToolNetworkData) == 0x10, "IToolNetworkData: Incorrect Size");
+
+SMSDK_END_NAMESPACE

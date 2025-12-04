@@ -1,8 +1,11 @@
 #pragma once
 
+#include "SmSdk/config.hpp"
 #include "SmSdk/Network/SteamNetworkSend.hpp"
 
 #include <memory>
+
+SMSDK_BEGIN_NAMESPACE
 
 struct NetworkServer
 {
@@ -16,3 +19,5 @@ private:
 }; // Size: 0x30
 
 static_assert(sizeof(NetworkServer) == 0x30, "NetworkServer: Incorrect Size");
+
+SMSDK_END_NAMESPACE

@@ -3,6 +3,8 @@
 #include "SmSdk/boost_include.hpp"
 #include <unordered_map>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct ContainerEntry
 {
 	/* 0x0000 */ boost::uuids::uuid m_itemUuid;
@@ -86,3 +88,5 @@ static_assert(offsetof(ContainerManager, ContainerManager::m_bOngoingTransaction
 static_assert(offsetof(ContainerManager, ContainerManager::m_worldContainerMap) == 0x40, "ContainerManager::m_worldContainerMap: Incorrect offset");
 
 static_assert(sizeof(ContainerManager) == 0x98, "ContainerManager: Incorrect Size");
+
+SMSDK_END_NAMESPACE
