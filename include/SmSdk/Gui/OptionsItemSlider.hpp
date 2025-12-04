@@ -38,3 +38,5 @@ public:
 };
 
 static_assert(offsetof(OptionsItemSlider, OptionsItemSlider::m_pSlider) == 0x10, "OptionsItemSlider::m_pSlider: Incorrect offset");
+
+SMSDK_END_NAMESPACE

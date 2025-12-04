@@ -3,6 +3,9 @@
 #include "SmSdk/config.hpp"
 
 #include "SmSdk/Base/NetObj.hpp"
+#include <unordered_map>
+#include <vector>
+#include <memory>
 
 struct PathNode : public NetObj
 {
