@@ -8,9 +8,6 @@
 //#define SMSDK_ENABLE_STEAMAPI
 //#define SMSDK_ENABLE_MYGUI
 //#define SMSDK_ENABLE_D3D11
-
-// WARNING: All the map getters will be wrong without the Boost uuid library
-// TODO: This could be fixed by implementing the hash function that Boost uses internally for our stub
 //#define SMSDK_ENABLE_BOOST
 
 // You can optionally wrap everything into a namespace
