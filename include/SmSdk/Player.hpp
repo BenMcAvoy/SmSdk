@@ -6,6 +6,8 @@
 #include "SmSdk/boost_include.hpp"
 #include <DirectXMath.h>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct PlayerGarments
 {
 	/* 0x0000 */ bool m_bIsFemale;
@@ -86,3 +88,5 @@ private:
 }; // Size: 0x150
 
 static_assert(sizeof(Player) == 0x150, "Player: Incorrect Size");
+
+SMSDK_END_NAMESPACE

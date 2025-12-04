@@ -9,6 +9,8 @@
 #include <unordered_set>
 #include <vector>
 
+SMSDK_BEGIN_NAMESPACE
+
 class RigidBody : public NetObj
 {
 public:
@@ -47,3 +49,5 @@ private:
 }; // Size: 0x1D0
 
 static_assert(sizeof(RigidBody) == 0x1D0, "RigidBody: Incorrect Size");
+
+SMSDK_END_NAMESPACE

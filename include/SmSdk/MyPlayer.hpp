@@ -11,6 +11,8 @@
 
 #include <memory>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct PlayerCamera
 {
 	/* 0x0000 */ DirectX::XMFLOAT3 cam_character_pos;
@@ -123,3 +125,5 @@ private:
 }; // Size: 0x370
 
 static_assert(sizeof(MyPlayer) == 0x370, "MyPlayer: Incorrect Size");
+
+SMSDK_END_NAMESPACE

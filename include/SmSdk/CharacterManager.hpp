@@ -10,6 +10,8 @@
 #include <memory>
 #include <map>
 
+SMSDK_BEGIN_NAMESPACE
+
 class CharacterManager
 {
 	REMOVE_COPY_CONSTRUCTORS(CharacterManager);
@@ -47,3 +49,5 @@ public:
 }; // Size: 0xB8
 
 static_assert(sizeof(CharacterManager) == 0xB8, "CharacterManager: Incorrect Size");
+
+SMSDK_END_NAMESPACE

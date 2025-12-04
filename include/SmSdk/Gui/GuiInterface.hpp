@@ -9,6 +9,8 @@
 #include <string>
 #include <deque>
 
+SMSDK_BEGIN_NAMESPACE
+
 class GuiBase;
 
 struct GuiDeferredCallback
@@ -71,3 +73,5 @@ static_assert(offsetof(GuiInterface, GuiInterface::m_deferredCallbackDeque) == 0
 static_assert(offsetof(GuiInterface, GuiInterface::m_vecDeferredCallbacks) == 0x288, "GuiInterface::m_vecDeferredCallbacks: Incorrect offset");
 
 static_assert(sizeof(GuiInterface) == 0x2A0, "GuiInterface: Incorrect Size");
+
+SMSDK_END_NAMESPACE

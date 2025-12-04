@@ -2,6 +2,8 @@
 
 #include "SmSdk/Physics/PhysicsProxy.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class HarvestablePhysicsProxy : public PhysicsProxy
 {
 public:
@@ -11,3 +13,5 @@ private:
 }; // Size: 0xC0
 
 static_assert(sizeof(HarvestablePhysicsProxy) == 0xC0, "HarvestablePhysicsProxy: Incorrect Size");
+
+SMSDK_END_NAMESPACE

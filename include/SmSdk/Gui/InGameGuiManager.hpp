@@ -6,6 +6,8 @@
 #include "SmSdk/Gui/InventoryGui.hpp"
 #include "SmSdk/Gui/HudGui2.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class InGameGuiManager : public InGameGuiManagerInterface
 {
 	REMOVE_COPY_CONSTRUCTORS(InGameGuiManager);
@@ -62,3 +64,5 @@ private:
 }; // Size: 0x1F0
 
 static_assert(sizeof(InGameGuiManager) == 0x1F0, "InGameGuiManager: Incorrect Size");
+
+SMSDK_END_NAMESPACE

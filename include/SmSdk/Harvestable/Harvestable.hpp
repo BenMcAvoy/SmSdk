@@ -5,6 +5,8 @@
 
 #include <DirectXMath.h>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct Harvestable : public NetObj
 {
 private:
@@ -44,3 +46,5 @@ private:
 }; // Size: 0x230
 
 static_assert(sizeof(Harvestable) == 0x230, "Harvestable: Incorrect Size");
+
+SMSDK_END_NAMESPACE

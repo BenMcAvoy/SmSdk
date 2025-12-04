@@ -5,6 +5,8 @@
 #include "SmSdk/Util/Memory.hpp"
 #include "SmSdk/offsets.hpp"
 
+SMSDK_USE_NAMESPACE
+
 #if defined(SMSDK_ENABLE_MYGUI)
 
 VerticalStackBox::VerticalStackBox(MyGUI::IntSize item_sz) : m_itemSize(item_sz),
@@ -22,18 +24,18 @@ VerticalStackBox::VerticalStackBox(MyGUI::IntSize item_sz) : m_itemSize(item_sz)
                                                              m_vecWidgets(),
                                                              m_separatorColor(0.25490198f, 0.25490198f, 0.25490198f) {}
 
-void VerticalStackBox::onParentChangeCoord(MyGUI::Widget* caller)
+void VerticalStackBox::onParentChangeCoord(MyGUI::Widget* pCaller)
 {
-	SMSDK_UNREF(caller);
+	SMSDK_UNREF(pCaller);
 	this->updateScrollBar();
 }
 
-void VerticalStackBox::onPanelScroll(MyGUI::Widget* caller, int scroll_val)
+void VerticalStackBox::onPanelScroll(MyGUI::Widget* pCaller, int iScrollVal)
 {
-	SMSDK_UNREF(caller);
+	SMSDK_UNREF(pCaller);
 
 	m_panelPos.top = GuiSystemManager::ProcessScroll(
-	    m_iScrollValue, m_iScrollDistance, m_panelPos.top, scroll_val,
+	    m_iScrollValue, m_iScrollDistance, m_panelPos.top, iScrollVal,
 	    GuiSystemManager::GetInstance()->getOptionItemSize2());
 
 	m_pEmptyPanel->setPosition(m_panelPos);
@@ -41,21 +43,21 @@ void VerticalStackBox::onPanelScroll(MyGUI::Widget* caller, int scroll_val)
 		m_pScrollBar->setScrollPosition(-m_panelPos.top);
 }
 
-void VerticalStackBox::onScrollbarChangePosition(MyGUI::ScrollBar* caller, size_t pos)
+void VerticalStackBox::onScrollbarChangePosition(MyGUI::ScrollBar* pCaller, size_t uPos)
 {
-	SMSDK_UNREF(caller);
+	SMSDK_UNREF(pCaller);
 
 	if (!m_pParent->getVisible())
 		return;
 
-	m_panelPos.top = -int(pos);
+	m_panelPos.top = -int(uPos);
 	m_pEmptyPanel->setPosition(m_panelPos);
 }
 
-void VerticalStackBox::initialize(MyGUI::Widget* parent, MyGUI::ScrollBar* scroll_bar)
+void VerticalStackBox::initialize(MyGUI::Widget* pParent, MyGUI::ScrollBar* pScrollBar)
 {
-	m_pParent = parent;
-	m_pScrollBar = scroll_bar;
+	m_pParent = pParent;
+	m_pScrollBar = pScrollBar;
 
 	m_pParent->eventChangeCoord += MyGUI::newDelegate(this, &VerticalStackBox::onParentChangeCoord);
 
@@ -67,9 +69,9 @@ void VerticalStackBox::initialize(MyGUI::Widget* parent, MyGUI::ScrollBar* scrol
 		m_pScrollBar->eventScrollChangePosition += MyGUI::newDelegate(this, &VerticalStackBox::onScrollbarChangePosition);
 }
 
-void VerticalStackBox::onItemChangeCoord(MyGUI::Widget* caller)
+void VerticalStackBox::onItemChangeCoord(MyGUI::Widget* pCaller)
 {
-	const size_t* pIdx = caller->getUserData<size_t>();
+	const size_t* pIdx = pCaller->getUserData<size_t>();
 	if (!pIdx)
 		return;
 
@@ -77,10 +79,10 @@ void VerticalStackBox::onItemChangeCoord(MyGUI::Widget* caller)
 
 	if (uItemIdx >= m_vecWidgets.size())
 	{
-		if (caller == m_vecWidgets[m_vecWidgets.size() - 1])
+		if (pCaller == m_vecWidgets[m_vecWidgets.size() - 1])
 		{
 			const MyGUI::IntSize size = m_pEmptyPanel->getSize();
-			m_pEmptyPanel->setSize(MyGUI::IntSize(size.width, caller->getBottom()));
+			m_pEmptyPanel->setSize(MyGUI::IntSize(size.width, pCaller->getBottom()));
 			this->updateScrollBar();
 		}
 	}
@@ -89,13 +91,13 @@ void VerticalStackBox::onItemChangeCoord(MyGUI::Widget* caller)
 		MyGUI::Widget* pCurrentWidget = m_vecWidgets[uItemIdx];
 		const MyGUI::IntPoint currentWidgetPos = pCurrentWidget->getPosition();
 
-		pCurrentWidget->setPosition(MyGUI::IntPoint(currentWidgetPos.left, caller->getBottom()));
+		pCurrentWidget->setPosition(MyGUI::IntPoint(currentWidgetPos.left, pCaller->getBottom()));
 	}
 }
 
-void VerticalStackBox::onItemScroll(MyGUI::Widget* caller, int scroll_val)
+void VerticalStackBox::onItemScroll(MyGUI::Widget* pCaller, int iScrollVal)
 {
-	this->m_pEmptyPanel->_riseMouseWheel(scroll_val);
+	this->m_pEmptyPanel->_riseMouseWheel(iScrollVal);
 }
 
 void VerticalStackBox::updateScrollBar()
@@ -117,7 +119,7 @@ void VerticalStackBox::updateScrollBar()
 	}
 
 	m_iScrollValue = heightDiff;
-	this->some_val7 = heightDiffDiv;
+	this->m_iSomeVal7 = heightDiffDiv;
 
 	if (m_pParent->getVisible() && m_pScrollBar)
 	{

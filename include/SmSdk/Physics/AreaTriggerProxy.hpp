@@ -2,6 +2,8 @@
 
 #include "SmSdk/Physics/PhysicsProxy.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 struct AreaTriggerProxy : public PhysicsProxy
 {
 	/* 0x0030 */ std::int32_t m_iAreaTriggerId;
@@ -19,3 +21,5 @@ struct WaterAreaTriggerProxy : public AreaTriggerProxy
 }; // Size: 0x40
 
 static_assert(sizeof(WaterAreaTriggerProxy) == 0x40, "WaterAreaTriggerProxy: Incorrect Size");
+
+SMSDK_END_NAMESPACE

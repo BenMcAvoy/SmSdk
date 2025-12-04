@@ -1,20 +1,23 @@
 #include "SmSdk/Gui/OptionsItemSlider.hpp"
+#include "SmSdk/config.hpp"
+
+SMSDK_USE_NAMESPACE
 
 #if defined(SMSDK_ENABLE_MYGUI)
 
 OptionsItemSlider::OptionsItemSlider(
-    MyGUI::Widget* widget,
+    MyGUI::Widget* pWidget,
     const std::string& caption,
     float fMinValue,
     float fMaxValue,
-    size_t uSteps) : OptionsItemBase(),
+    size_t iScrollRange) : OptionsItemBase(),
                      m_pSlider(nullptr),
                      m_pValueTextBox(nullptr),
-                     m_uSteps(uSteps),
+                     m_uSteps(iScrollRange),
                      m_fMinValue(fMinValue),
                      m_fMaxValue(fMaxValue)
 {
-	this->initializeSlider(widget, caption);
+	this->initializeSlider(pWidget, caption);
 	m_pSlider->setScrollRange(m_uSteps + 1);
 }
 
@@ -25,8 +28,8 @@ void OptionsItemSlider::initializeSlider(MyGUI::Widget* pParent, const std::stri
 
 	pParent->findWidget("Name")->castType<MyGUI::TextBox>()->setCaptionWithReplacing(caption);
 
-	m_pSlider = parent->findWidget("Slider")->castType<MyGUI::ScrollBar>();
-	m_pValueTextBox = parent->findWidget("Value")->castType<MyGUI::TextBox>();
+	m_pSlider = pParent->findWidget("Slider")->castType<MyGUI::ScrollBar>();
+	m_pValueTextBox = pParent->findWidget("Value")->castType<MyGUI::TextBox>();
 }
 
 void OptionsItemSlider::updateValueText()

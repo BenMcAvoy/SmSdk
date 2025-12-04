@@ -5,6 +5,8 @@
 
 #include <DirectXMath.h>
 
+SMSDK_BEGIN_NAMESPACE
+
 class Shape
 {
 private:
@@ -27,3 +29,5 @@ private:
 }; // Size: 0x60
 
 static_assert(sizeof(Shape) == 0x60, "Shape: Incorrect Size");
+
+SMSDK_END_NAMESPACE

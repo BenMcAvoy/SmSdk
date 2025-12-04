@@ -4,6 +4,8 @@
 
 #include <DirectXMath.h>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct CharacterPhysicsProxy : public PhysicsProxy
 {
 private:
@@ -24,3 +26,5 @@ private:
 }; // Size: 0xD0
 
 static_assert(sizeof(CharacterPhysicsProxy) == 0xD0, "CharacterPhysicsProxy: Incorrect Size");
+
+SMSDK_END_NAMESPACE

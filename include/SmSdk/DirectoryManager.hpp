@@ -5,6 +5,8 @@
 #include <unordered_map>
 #include <string>
 
+SMSDK_BEGIN_NAMESPACE
+
 class DirectoryManager
 {
 	SINGLETON_CLASS(DirectoryManager);
@@ -21,3 +23,5 @@ private:
 public:
 	std::unordered_map<std::string, std::string> m_mapContentKeyToPathList;
 };
+
+SMSDK_END_NAMESPACE

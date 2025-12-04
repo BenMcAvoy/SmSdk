@@ -3,6 +3,8 @@
 
 #include "SmSdk/Gui/OptionsSubMenuBase.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class GameplayOptionsMenu : public OptionsSubMenuBase
 {
 public:
@@ -29,3 +31,5 @@ static_assert(sizeof(GameplayOptionsMenu) == 0x178, "GameplayOptionsMenu: Incorr
 #else
 static_assert(sizeof(GameplayOptionsMenu) == 0x168, "GameplayOptionsMenu: Incorrect Size");
 #endif
+
+SMSDK_END_NAMESPACE

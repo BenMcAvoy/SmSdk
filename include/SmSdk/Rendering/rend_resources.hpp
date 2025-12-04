@@ -6,6 +6,8 @@
 #include <unordered_map>
 #include <string>
 
+SMSDK_BEGIN_NAMESPACE
+
 namespace rend
 {
 class D3D11Resource
@@ -65,3 +67,5 @@ public:
 static_assert(offsetof(rend::D3D11Layout, rend::D3D11Layout::m_pDxLayout) == 0x28, "rend::D3D11Layout::m_pDxLayout: Incorrect offset");
 static_assert(sizeof(rend::D3D11Layout) == 0x30, "rend::D3D11Layout: Incorrect Size");
 }
+
+SMSDK_END_NAMESPACE

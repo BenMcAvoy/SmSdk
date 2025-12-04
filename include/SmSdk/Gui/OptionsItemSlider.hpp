@@ -8,6 +8,8 @@
 #include <functional>
 #include <string>
 
+SMSDK_BEGIN_NAMESPACE
+
 class OptionsItemSlider : public OptionsItemBase
 {
 public:
@@ -34,3 +36,7 @@ public:
 	float m_fMinValue;
 	float m_fMaxValue;
 };
+
+static_assert(offsetof(OptionsItemSlider, OptionsItemSlider::m_pSlider) == 0x10, "OptionsItemSlider::m_pSlider: Incorrect offset");
+
+SMSDK_END_NAMESPACE

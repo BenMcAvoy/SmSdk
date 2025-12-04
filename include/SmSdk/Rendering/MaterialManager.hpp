@@ -8,6 +8,8 @@
 #include <unordered_map>
 #include <vector>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct MaterialEntry
 {
 public:
@@ -108,3 +110,5 @@ static_assert(offsetof(MaterialManager, MaterialManager::m_arrMaterialMap) == 0x
 static_assert(offsetof(MaterialManager, MaterialManager::m_vecMaterials) == 0x348, "MaterialManager::m_vecMaterials: Incorrect offset");
 
 static_assert(sizeof(MaterialManager) == 0x360, "MaterialManager: Incorrect Size");
+
+SMSDK_END_NAMESPACE

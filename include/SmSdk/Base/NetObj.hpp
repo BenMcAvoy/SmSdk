@@ -2,6 +2,8 @@
 
 #include <memory>
 
+SMSDK_BEGIN_NAMESPACE
+
 class NetObj
 {
 public:
@@ -20,3 +22,5 @@ public:
 }; // Size: 0x28
 
 static_assert(sizeof(NetObj) == 0x28, "NetObj: Incorrect Size");
+
+SMSDK_END_NAMESPACE

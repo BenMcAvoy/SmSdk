@@ -5,6 +5,8 @@
 #include "SmSdk/Util/Memory.hpp"
 #include "SmSdk/offsets.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class DisplayOptionsMenu : public OptionsSubMenuBase
 {
 public:
@@ -21,3 +23,5 @@ private:
 }; // Size: 0x238
 
 static_assert(sizeof(DisplayOptionsMenu) == 0x238, "DisplayOptionsMenu: Incorrect Size");
+
+SMSDK_END_NAMESPACE

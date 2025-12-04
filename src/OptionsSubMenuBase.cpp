@@ -2,6 +2,9 @@
 #include "SmSdk/Gui/GuiSystemManager.hpp"
 
 #include "SmSdk/unreferenced_params.hpp"
+#include "SmSdk/config.hpp"
+
+SMSDK_USE_NAMESPACE
 
 #if defined(SMSDK_ENABLE_MYGUI)
 
@@ -16,11 +19,11 @@ OptionsSubMenuBase::OptionsSubMenuBase() : m_pSubMenuWidget(nullptr),
                                            m_iScrollValue(0),
                                            m_containerPos(0, 0) {}
 
-void OptionsSubMenuBase::onScrollChangePos(MyGUI::ScrollBar* pCaller, size_t pos)
+void OptionsSubMenuBase::onScrollChangePos(MyGUI::ScrollBar* pCaller, size_t iPos)
 {
 	SMSDK_UNREF(pCaller);
 
-	m_containerPos.top = -int(pos);
+	m_containerPos.top = -int(iPos);
 	m_pContainer->setPosition(m_containerPos);
 	this->someFunc4();
 }
@@ -122,7 +125,7 @@ void OptionsSubMenuBase::initialize(MyGUI::Widget* pParent)
 
 void OptionsSubMenuBase::cleanOptionItems()
 {
-	m_optionItems.clear();
+	m_vecOptionItems.clear();
 }
 
 void OptionsSubMenuBase::openMenu()

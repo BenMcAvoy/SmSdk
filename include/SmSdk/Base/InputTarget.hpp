@@ -1,6 +1,9 @@
 #pragma once
 
+#include "SmSdk/config.hpp"
 #include "SmSdk/unreferenced_params.hpp"
+
+SMSDK_BEGIN_NAMESPACE
 
 class InputTarget
 {
@@ -15,3 +18,5 @@ private:
 }; // Size: 0x8
 
 static_assert(sizeof(InputTarget) == 0x8, "InputTarget: Incorrect Size");
+
+SMSDK_END_NAMESPACE

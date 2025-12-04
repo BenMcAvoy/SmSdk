@@ -2,6 +2,8 @@
 
 #include "SmSdk/bullet_include.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 enum PhysicsProxyType : unsigned char
 {
 	PhysicsProxyType_Border = 1,
@@ -31,3 +33,5 @@ private:
 }; // Size: 0x30
 
 static_assert(sizeof(PhysicsProxy) == 0x30, "PhysicsProxy: Incorrect Size");
+
+SMSDK_END_NAMESPACE

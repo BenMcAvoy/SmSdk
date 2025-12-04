@@ -5,6 +5,8 @@
 #include <string>
 #include <deque>
 
+SMSDK_BEGIN_NAMESPACE
+
 enum EKeyState : uint32_t
 {
 	EKeyState_None = 0,
@@ -155,3 +157,5 @@ private:
 }; // Size: 0x6B0
 
 static_assert(sizeof(InputManager) == 0x6B0, "InputManager: Incorrect Size");
+
+SMSDK_END_NAMESPACE

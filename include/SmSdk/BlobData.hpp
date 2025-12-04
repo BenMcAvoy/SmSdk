@@ -5,6 +5,10 @@
 #include <cstdint>
 #include <cstddef>
 
+#include "SmSdk/config.hpp"
+
+SMSDK_BEGIN_NAMESPACE
+
 struct BlobDataKey
 {
 public:
@@ -45,3 +49,5 @@ static_assert(offsetof(BlobData, BlobData::m_uBlobSize) == 0x30, "BlobData::m_uB
 static_assert(offsetof(BlobData, BlobData::m_pBlobData) == 0x38, "BlobData::m_pBlobData: Incorrect offset");
 
 static_assert(sizeof(BlobData) == 0x40, "BlobData: Incorrect Size");
+
+SMSDK_END_NAMESPACE

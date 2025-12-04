@@ -1,5 +1,9 @@
 #pragma once
 
+#include "SmSdk/config.hpp"
+
+SMSDK_BEGIN_NAMESPACE
+
 struct IToolImpl
 {
 private:
@@ -14,3 +18,5 @@ public:
 }; // Size: 0x8
 
 static_assert(sizeof(IToolImpl) == 0x8, "IToolImpl: Incorrect Size");
+
+SMSDK_END_NAMESPACE

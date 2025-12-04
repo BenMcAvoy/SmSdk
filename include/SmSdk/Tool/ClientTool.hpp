@@ -7,6 +7,8 @@
 #include <string>
 #include <memory>
 
+SMSDK_BEGIN_NAMESPACE
+
 class ClientTool;
 
 enum AnimationFlag : uint32_t
@@ -157,3 +159,5 @@ private:
 }; // Size: 0x548
 
 static_assert(sizeof(ClientTool) == 0x548, "ClientTool: Incorrect Size");
+
+SMSDK_END_NAMESPACE

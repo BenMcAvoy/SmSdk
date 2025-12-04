@@ -3,6 +3,8 @@
 #include "SmSdk/Physics/PhysicsProxy.hpp"
 #include "SmSdk/bullet_include.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 struct JointPhysicsProxy : public PhysicsProxy
 {
 private:
@@ -12,3 +14,5 @@ public:
 }; // Size: 0x40
 
 static_assert(sizeof(JointPhysicsProxy) == 0x40, "JointPhysicsProxy: Incorrect Size");
+
+SMSDK_END_NAMESPACE

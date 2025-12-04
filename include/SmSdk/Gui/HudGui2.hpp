@@ -5,6 +5,8 @@
 #include <vector>
 #include <string>
 
+SMSDK_BEGIN_NAMESPACE
+
 class HudGui2 : public GuiBase
 {
 private:
@@ -21,3 +23,5 @@ private:
 }; // Size: 0x128
 
 static_assert(sizeof(HudGui2) == 0x128, "HudGui2: Incorrect Size");
+
+SMSDK_END_NAMESPACE

@@ -2,6 +2,8 @@
 
 #include "SmSdk/Network/NetworkServer.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 struct SteamNetworkServer : public NetworkServer
 {
 private:
@@ -9,3 +11,5 @@ private:
 }; // Size: 0x128
 
 static_assert(sizeof(SteamNetworkServer) == 0x128, "SteamNetworkServer: Incorrect Size");
+
+SMSDK_END_NAMESPACE

@@ -3,6 +3,8 @@
 #include "SmSdk/mygui_include.hpp"
 #include "SmSdk/Gui/GuiBase.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 struct InventoryGui : public GuiBase
 {
 private:
@@ -14,3 +16,5 @@ private:
 }; // Size: 0x7F8
 
 static_assert(sizeof(InventoryGui) == 0x7F8, "InventoryGui: Incorrect Size");
+
+SMSDK_END_NAMESPACE

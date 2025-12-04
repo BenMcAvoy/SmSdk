@@ -9,6 +9,8 @@
 #include <memory>
 #include <string>
 
+SMSDK_BEGIN_NAMESPACE
+
 struct BodyStructure
 {
 	std::shared_ptr<RigidBody> m_pBody;
@@ -41,3 +43,5 @@ public:
 	std::unordered_map<int, std::shared_ptr<struct ControllerEntry>> m_mapInteractiveParts;
 	std::unordered_map<int, struct CreationEntry> m_mapCreations;
 };
+
+SMSDK_END_NAMESPACE

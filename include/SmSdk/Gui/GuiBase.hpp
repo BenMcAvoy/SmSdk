@@ -5,6 +5,8 @@
 
 #include "SmSdk/Gui/GuiInterface.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 class GuiBase
 {
 public:
@@ -30,3 +32,7 @@ public:
 	/* 0x0008 */ MyGUI::Widget* m_pMainPanel;
 	/* 0x0010 */ GuiInterface* m_pGuiInterface;
 }; // Size: 0x18
+
+static_assert(sizeof(GuiBase) == 0x18, "GuiBase: Incorrect Size");
+
+SMSDK_END_NAMESPACE

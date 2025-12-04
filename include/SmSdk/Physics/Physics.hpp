@@ -3,6 +3,8 @@
 #include "SmSdk/bullet_include.hpp"
 #include "SmSdk/Base/Task.hpp"
 
+SMSDK_BEGIN_NAMESPACE
+
 struct PhysicsBase : public Task
 {
 private:
@@ -65,3 +67,5 @@ public:
 }; // Size: 0x30
 
 static_assert(sizeof(Physics) == 0x30, "Physics: Incorrect Size");
+
+SMSDK_END_NAMESPACE
