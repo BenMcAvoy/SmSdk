@@ -16,7 +16,7 @@ private:
 	/* 0x0008 */ char pad_0x8[0x8];
 public:
 	/* 0x0010 */ boost::uuids::uuid m_shapeUuid;
-	/* 0x0020 */ int32_t m_iShapeType;
+	/* 0x0020 */ std::int32_t m_iShapeType;
 	/* 0x0024 */ Color m_shapeColor;
 private:
 	/* 0x0028 */ char pad_0x28[0x4];

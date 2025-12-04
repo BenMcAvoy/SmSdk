@@ -11,11 +11,11 @@
 
 struct EventData
 {
-	/* 0x0000 */ int16_t m_iWorldId;
+	/* 0x0000 */ std::int16_t m_iWorldId;
 private:
 	/* 0x0002 */ char pad_0x2[0x2];
 public:
-	/* 0x0004 */ int32_t m_iSomeVal;
+	/* 0x0004 */ std::int32_t m_iSomeVal;
 private:
 	/* 0x0008 */ char pad_0x8[0x18];
 public:
@@ -72,7 +72,7 @@ public:
 private:
 	/* 0x01C8 */ char pad_0x1C8[0x100];
 public:
-	/* 0x02C8 */ int32_t m_iFmodInitFlags;
+	/* 0x02C8 */ std::int32_t m_iFmodInitFlags;
 private:
 	/* 0x02CC */ char pad_0x2CC[0xC];
 }; // Size: 0x2D8

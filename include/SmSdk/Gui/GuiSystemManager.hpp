@@ -65,10 +65,10 @@ public:
 	/* 0x0078 */ std::vector<std::string> m_vecFonts;
 	/* 0x0090 */ std::vector<struct SystemTexture*> m_vecFontTextures;
 	/* 0x00A8 */ std::unordered_map<std::string, struct SystemTexture*> m_mapFontNameToTexture;
-	/* 0x00E8 */ int32_t m_iScreenWidth;
-	/* 0x00EC */ int32_t m_iScreenHeight;
-	/* 0x00F0 */ int32_t m_iScreenLeft;
-	/* 0x00F4 */ int32_t m_iScreenTop;
+	/* 0x00E8 */ std::int32_t m_iScreenWidth;
+	/* 0x00EC */ std::int32_t m_iScreenHeight;
+	/* 0x00F0 */ std::int32_t m_iScreenLeft;
+	/* 0x00F4 */ std::int32_t m_iScreenTop;
 	/* 0x00F8 */ std::string m_guiLanguage;
 private:
 	/* 0x0118 */ char pad_0x118[0x28];

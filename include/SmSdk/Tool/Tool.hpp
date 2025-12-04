@@ -12,7 +12,7 @@ private:
 	/* 0x0028 */ char pad_0x28[0x8];
 public:
 	/* 0x0030 */ char uuid[16];
-	/* 0x0040 */ int32_t m_iOwnerId;
+	/* 0x0040 */ std::int32_t m_iOwnerId;
 private:
 	/* 0x0044 */ char pad_0x44[0x4];
 public:

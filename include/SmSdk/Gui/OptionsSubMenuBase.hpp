@@ -60,7 +60,7 @@ public:
 	/* 0x0030 */ VerticalStackBox m_leftStackBox;
 	/* 0x00B8 */ VerticalStackBox m_rightStackBox;
 	/* 0x0140 */ std::vector<std::shared_ptr<OptionsItemBase>> m_vecOptionItems;
-	/* 0x0158 */ int32_t m_iScrollValue;
+	/* 0x0158 */ std::int32_t m_iScrollValue;
 	/* 0x015C */ MyGUI::IntPoint m_containerPos;
 private:
 	/* 0x0164 */ char pad_0x164[0x4];

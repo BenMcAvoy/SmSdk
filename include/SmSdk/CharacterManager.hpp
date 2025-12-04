@@ -39,9 +39,9 @@ public:
 	/* 0x0008 */ std::unordered_map<int, std::shared_ptr<Character>> m_mapCharacterState;
 	/* 0x0048 */ std::unordered_map<int, std::shared_ptr<struct Lift>> m_worldLiftMap;
 private:
-	/* 0x0088 */ int32_t m_iSomeId;
+	/* 0x0088 */ std::int32_t m_iSomeId;
 public:
-	/* 0x008C */ int32_t m_iTick;
+	/* 0x008C */ std::int32_t m_iTick;
 	/* 0x0090 */ std::map<boost::uuids::uuid, struct CharacterData> m_mapCharacterData;
 	/* 0x00A0 */ std::vector<std::shared_ptr<Character>> m_vecCharacters;
 }; // Size: 0xB8

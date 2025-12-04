@@ -88,7 +88,7 @@ public:
 	/* 0x0148 */ std::shared_ptr<class GameInstance> m_pGameInstance;
 	/* 0x0158 */ SimpleTimer m_someTimer;
 public:
-	/* 0x0170 */ int32_t m_iConnectionTimeoutIdx;
+	/* 0x0170 */ std::int32_t m_iConnectionTimeoutIdx;
 private:
 	/* 0x0174 */ char pad_0x174[0x1C];
 }; // Size: 0x190

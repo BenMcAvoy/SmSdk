@@ -29,13 +29,13 @@ public:
 private:
 	/* 0x0041 */ char pad_0x41[0x3];
 private:
-	/* 0x0044 */ int32_t m_iSomeVal3;
-	/* 0x0048 */ int32_t m_iSomeVal4;
+	/* 0x0044 */ std::int32_t m_iSomeVal3;
+	/* 0x0048 */ std::int32_t m_iSomeVal4;
 public:
-	/* 0x004C */ int32_t m_iScrollDistance;
-	/* 0x0050 */ int32_t m_iScrollValue;
+	/* 0x004C */ std::int32_t m_iScrollDistance;
+	/* 0x0050 */ std::int32_t m_iScrollValue;
 private:
-	/* 0x0054 */ int32_t m_iSomeVal7;
+	/* 0x0054 */ std::int32_t m_iSomeVal7;
 public:
 	/* 0x0058 */ MyGUI::IntPoint m_panelPos;
 	/* 0x0060 */ std::vector<MyGUI::Widget*> m_vecWidgets;

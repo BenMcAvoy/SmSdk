@@ -65,7 +65,7 @@ public:
 	Character* getCharacter() const;
 
 	/* 0x0070 */ std::shared_ptr<Player> m_player;
-	/* 0x0080 */ int8_t m_controlCharacterSum;
+	/* 0x0080 */ std::int8_t m_controlCharacterSum;
 private:
 	/* 0x0081 */ char pad_0x81[0x3];
 public:
@@ -97,11 +97,11 @@ public:
 private:
 	/* 0x0211 */ char pad_0x211[0xD7];
 public:
-	/* 0x02E8 */ int32_t m_iOwnedLiftId;
+	/* 0x02E8 */ std::int32_t m_iOwnedLiftId;
 private:
 	/* 0x02EC */ char pad_0x2EC[0x34];
 public:
-	/* 0x0320 */ int32_t m_iCameraPullbackIdx;
+	/* 0x0320 */ std::int32_t m_iCameraPullbackIdx;
 private:
 	/* 0x0324 */ char pad_0x324[0x4];
 public:
@@ -114,9 +114,9 @@ private:
 	/* 0x033A */ char pad_0x33A[0x6];
 public:
 	/* 0x0340 */ boost::uuids::uuid m_selectedToolUuid;
-	/* 0x0350 */ int32_t m_iSelectedToolId;
+	/* 0x0350 */ std::int32_t m_iSelectedToolId;
 	/* 0x0354 */ boost::uuids::uuid m_prevSelectedToolUuid;
-	/* 0x0364 */ int32_t m_iPrevSelectedToolId;
+	/* 0x0364 */ std::int32_t m_iPrevSelectedToolId;
 private:
 	/* 0x0368 */ char pad_0x368[0x8];
 

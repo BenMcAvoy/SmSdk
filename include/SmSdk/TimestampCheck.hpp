@@ -12,7 +12,7 @@ namespace SmSdk
 // Checks the versions of the loaded module by its timestamp
 bool CheckTimestamp(uint32_t timeStamp)
 {
-	const uintptr_t pBase = (uintptr_t) GetModuleHandle(NULL);
+	const std::uintptr_t pBase = (std::uintptr_t) GetModuleHandle(NULL);
 
 	const IMAGE_DOS_HEADER* pDosHeader = reinterpret_cast<const IMAGE_DOS_HEADER*>(pBase);
 	const IMAGE_NT_HEADERS64* pNtHeader = reinterpret_cast<const IMAGE_NT_HEADERS64*>(pBase + pDosHeader->e_lfanew);

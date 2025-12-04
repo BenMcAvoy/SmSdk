@@ -10,8 +10,8 @@ private:
 
 	/* 0x0008 */ char pad_0x8[0x10];
 public:
-	/* 0x0018 */ int64_t m_iTick;
-	/* 0x0020 */ int64_t m_iTick2;
+	/* 0x0018 */ std::int64_t m_iTick;
+	/* 0x0020 */ std::int64_t m_iTick2;
 }; // Size: 0x28
 
 static_assert(sizeof(NetworkSendInterface) == 0x28, "NetworkSendInterface: Incorrect Size");

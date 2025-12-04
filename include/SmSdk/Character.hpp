@@ -33,7 +33,7 @@ public:
 	/* 0x0010 */ float m_fGroundTraction;
 	/* 0x0014 */ float m_fAirTraction;
 private:
-	/* 0x0018 */ int32_t m_iUnk1;
+	/* 0x0018 */ std::int32_t m_iUnk1;
 	/* 0x001C */ float m_fUnk1;
 	/* 0x0020 */ float m_fUnk2;
 public:
@@ -134,7 +134,7 @@ private:
 
 static_assert(sizeof(CharacterControllerData) == 0x34, "CharacterControllerData: Incorrect Size");
 
-enum ECharacterMovementState : int8_t
+enum ECharacterMovementState : std::int8_t
 {
 	ECharacterMovementState_Standing = 1,
 	ECharacterMovementState_Crouching = 2,
@@ -145,16 +145,16 @@ class Character : public NetObj
 {
 	/* 0x0028 */ char pad_0x28[0x8];
 public:
-	/* 0x0030 */ int16_t m_iWorldId;
+	/* 0x0030 */ std::int16_t m_iWorldId;
 private:
 	/* 0x0032 */ char pad_0x32[0x6];
 public:
-	/* 0x0038 */ int64_t m_iOwnerSteamId;
+	/* 0x0038 */ std::int64_t m_iOwnerSteamId;
 	/* 0x0040 */ bool m_bIsPlayer;
 private:
 	/* 0x0041 */ char pad_0x41[0x3];
 public:
-	/* 0x0044 */ int32_t m_iUnitId;
+	/* 0x0044 */ std::int32_t m_iUnitId;
 	/* 0x0048 */ boost::uuids::uuid m_uuid;
 	/* 0x0058 */ bool m_bDowned;
 	/* 0x0059 */ bool m_bSwimming;
@@ -187,8 +187,8 @@ public:
 private:
 	/* 0x08B0 */ char pad_0x8B0[0x8];
 public:
-	/* 0x08B8 */ int32_t m_iNextLockingInteractableId;
-	/* 0x08BC */ int32_t m_iLockingInteractableId;
+	/* 0x08B8 */ std::int32_t m_iNextLockingInteractableId;
+	/* 0x08BC */ std::int32_t m_iLockingInteractableId;
 private:
 	/* 0x08C0 */ char pad_0x8C0[0x18];
 public:
@@ -202,9 +202,9 @@ private:
 	/* 0x08EC */ char pad_0x8EC[0xC];
 public:
 	/* 0x08F8 */ boost::uuids::uuid m_selectedToolUuid;
-	/* 0x0908 */ int32_t m_iSelectedToolId;
+	/* 0x0908 */ std::int32_t m_iSelectedToolId;
 	/* 0x090C */ boost::uuids::uuid m_prevSelectedToolUuid;
-	/* 0x091C */ int32_t m_iPrevSelectedToolId;
+	/* 0x091C */ std::int32_t m_iPrevSelectedToolId;
 private:
 	/* 0x0920 */ char pad_0x920[0x2];
 public:
@@ -226,8 +226,8 @@ private:
 public:
 	/* 0x0C70 */ std::string m_scriptPath;
 	/* 0x0C90 */ std::string m_scriptClass;
-	/* 0x0CB0 */ int32_t m_iScriptRef;
-	/* 0x0CB4 */ int32_t m_iPublicDataScriptRef;
+	/* 0x0CB0 */ std::int32_t m_iScriptRef;
+	/* 0x0CB4 */ std::int32_t m_iPublicDataScriptRef;
 private:
 	/* 0x0CB8 */ char pad_0xCB8[0x88];
 public:
@@ -247,7 +247,7 @@ public:
 	/* 0x0DC4 */ DirectX::XMFLOAT4 m_nameTagColor;
 	/* 0x0DD4 */ float m_fNameTagFadeDistance;
 	/* 0x0DD8 */ float m_fNameTagRenderDistance;
-	/* 0x0DDC */ int32_t m_iNameTagUpdateCounter;
+	/* 0x0DDC */ std::int32_t m_iNameTagUpdateCounter;
 }; // Size: 0xDE0
 
 
@@ -308,16 +308,16 @@ class Character : public NetObj
 private:
 	/* 0x0028 */ char pad_0x28[0x8];
 public:
-	/* 0x0030 */ int16_t m_iWorldId;
+	/* 0x0030 */ std::int16_t m_iWorldId;
 private:
 	/* 0x0032 */ char pad_0x32[0x6];
 public:
-	/* 0x0038 */ int64_t m_iOwnerSteamId;
+	/* 0x0038 */ std::int64_t m_iOwnerSteamId;
 	/* 0x0040 */ bool m_bIsPlayer;
 private:
 	/* 0x0041 */ char pad_0x41[0x3];
 public:
-	/* 0x0044 */ int32_t m_iUnitId;
+	/* 0x0044 */ std::int32_t m_iUnitId;
 	/* 0x0048 */ boost::uuids::uuid m_uuid;
 	/* 0x0058 */ bool m_bIsDowned;
 	/* 0x0059 */ bool m_bIsSwimming;
@@ -344,7 +344,7 @@ public:
 private:
 	/* 0x00C0 */ char pad_0xC0[0x14];
 public:
-	/* 0x00D4 */ int32_t m_iControlKeySum;
+	/* 0x00D4 */ std::int32_t m_iControlKeySum;
 	/* 0x00D8 */ float m_fWalkDirectionRadians;
 	/* 0x00DC */ float m_fYaw;
 	/* 0x00E0 */ float m_fPitch;
@@ -357,7 +357,7 @@ public:
 private:
 	/* 0x010C */ char pad_0x10C[0x4];
 public:
-	/* 0x0110 */ int32_t m_iLockingInteractableId;
+	/* 0x0110 */ std::int32_t m_iLockingInteractableId;
 private:
 	/* 0x0114 */ char pad_0x114[0x1C];
 public:
@@ -371,13 +371,13 @@ private:
 	/* 0x0144 */ char pad_0x144[0xC];
 public:
 	/* 0x0150 */ boost::uuids::uuid m_selectedToolUuid;
-	/* 0x0160 */ int32_t m_selectedToolId;
+	/* 0x0160 */ std::int32_t m_selectedToolId;
 	/* 0x0164 */ boost::uuids::uuid m_prevSelectedToolUuid;
-	/* 0x0174 */ int32_t m_prevSelectedToolId;
+	/* 0x0174 */ std::int32_t m_prevSelectedToolId;
 private:
 	/* 0x0178 */ char pad_0x178[0x2];
 public:
-	/* 0x017A */ int8_t m_crouchState;
+	/* 0x017A */ std::int8_t m_crouchState;
 private:
 	/* 0x017B */ char pad_0x17B[0x1D];
 public:
@@ -409,7 +409,7 @@ private:
 public:
 	/* 0x02C0 */ std::string m_scriptPath;
 	/* 0x02E0 */ std::string m_scriptClass;
-	/* 0x0300 */ int32_t m_scriptRef;
+	/* 0x0300 */ std::int32_t m_scriptRef;
 private:
 	/* 0x0304 */ char pad_0x304[0x8];
 public:
@@ -429,7 +429,7 @@ public:
 	/* 0x0394 */ DirectX::XMFLOAT4 m_nameTagColor;
 	/* 0x03A4 */ float m_nameTagFadeDistance;
 	/* 0x03A8 */ float m_nameTagRenderDistance;
-	/* 0x03AC */ int32_t m_nameTagUpdateCounter;
+	/* 0x03AC */ std::int32_t m_nameTagUpdateCounter;
 }; // Size: 0x3B0
 
 static_assert(sizeof(Character) == 0x3B0, "Character: Incorrect Size");

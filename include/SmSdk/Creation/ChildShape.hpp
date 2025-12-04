@@ -31,7 +31,7 @@ public:
 private:
 	/* 0x0068 */ char pad_0x0068[0x8];
 public:
-	/* 0x0070 */ int32_t m_iCurrentIdx;
+	/* 0x0070 */ std::int32_t m_iCurrentIdx;
 private:
 	/* 0x0074 */ char pad_0x0074[0xC];
 public:

@@ -6,7 +6,7 @@ class Task
 {
 public:
 	virtual ~Task() {}
-	virtual int64_t update(float fDeltaTime)
+	virtual std::int64_t update(float fDeltaTime)
 	{
 		SMSDK_UNREF(fDeltaTime);
 		return 0;

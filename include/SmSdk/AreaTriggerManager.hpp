@@ -12,8 +12,8 @@
 
 struct AreaTrigger
 {
-	/* 0x0000 */ int32_t m_iId;
-	/* 0x0004 */ int16_t m_iWorldId;
+	/* 0x0000 */ std::int32_t m_iId;
+	/* 0x0004 */ std::int16_t m_iWorldId;
 private:
 	/* 0x0006 */ char pad_0x6[0xE];
 public:

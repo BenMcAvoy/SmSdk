@@ -46,7 +46,7 @@ public:
 	/* 0x0000 */ std::unordered_map<std::string, int> m_mapIntSettings;
 	/* 0x0040 */ std::unordered_map<std::string, float> m_mapFloatSettings;
 	/* 0x0080 */ std::unordered_map<std::string, std::string> m_mapStringSettings;
-	/* 0x00C0 */ int32_t m_appliedSettings;
+	/* 0x00C0 */ std::int32_t m_appliedSettings;
 private:
 	/* 0x00C4 */ char pad_0xC4[0x4];
 }; // Size: 0xC8

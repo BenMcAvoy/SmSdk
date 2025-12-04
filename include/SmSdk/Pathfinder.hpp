@@ -5,7 +5,7 @@ struct PathNode : public NetObj
 private:
 	/* 0x0028 */ char pad_0x28[0x8];
 public:
-	/* 0x0030 */ int16_t m_iWorldId;
+	/* 0x0030 */ std::int16_t m_iWorldId;
 private:
 	/* 0x0032 */ char pad_0x32[0x1E];
 public:

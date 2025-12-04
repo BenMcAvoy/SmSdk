@@ -5,7 +5,7 @@
 class HarvestablePhysicsProxy : public PhysicsProxy
 {
 public:
-	/* 0x0030 */ int32_t m_iHarvestableId;
+	/* 0x0030 */ std::int32_t m_iHarvestableId;
 private:
 	/* 0x0034 */ char pad_0x34[0x8C];
 }; // Size: 0xC0

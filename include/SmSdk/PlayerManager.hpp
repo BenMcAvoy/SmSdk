@@ -46,7 +46,7 @@ public:
 		return pPlayerMgr->_getPlayerFromSteamId(steam_id);
 	}
 
-	/* 0x0000 */ int32_t m_iTick;
+	/* 0x0000 */ std::int32_t m_iTick;
 private:
 	/* 0x0004 */ char pad_0x4[0x4];
 public:

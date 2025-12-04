@@ -10,27 +10,27 @@
 
 namespace Memory
 {
-inline static uintptr_t ToLocalAddress(const void* pPtr)
+inline static std::uintptr_t ToLocalAddress(const void* pPtr)
 {
-	return uintptr_t(pPtr) - uintptr_t(GetModuleHandle(NULL));
+	return std::uintptr_t(pPtr) - std::uintptr_t(GetModuleHandle(NULL));
 }
 
 template <typename T>
-inline static T& ReadRef(uintptr_t uOffset)
+inline static T& ReadRef(std::uintptr_t uOffset)
 {
-	return *reinterpret_cast<T*>(uintptr_t(GetModuleHandle(NULL)) + uOffset);
+	return *reinterpret_cast<T*>(std::uintptr_t(GetModuleHandle(NULL)) + uOffset);
 }
 
 template <typename T>
-inline static T* ReadPtr(uintptr_t uOffset)
+inline static T* ReadPtr(std::uintptr_t uOffset)
 {
-	return reinterpret_cast<T*>(uintptr_t(GetModuleHandle(NULL)) + uOffset);
+	return reinterpret_cast<T*>(std::uintptr_t(GetModuleHandle(NULL)) + uOffset);
 }
 
 template <typename T>
-inline static T Read(uintptr_t uOffset)
+inline static T Read(std::uintptr_t uOffset)
 {
-	return reinterpret_cast<T>(uintptr_t(GetModuleHandle(NULL)) + uOffset);
+	return reinterpret_cast<T>(std::uintptr_t(GetModuleHandle(NULL)) + uOffset);
 }
 
 template <typename T>
@@ -43,7 +43,7 @@ void WriteGlobal(void* pAddr, const T& data)
 }
 
 template <typename T>
-void WriteMemory(uintptr_t uOffset, const T& data)
+void WriteMemory(std::uintptr_t uOffset, const T& data)
 {
 	//void* v_global_ptr = ReadPtr<void>(uOffset);
 	WriteGlobal<T>(ReadPtr<void>(uOffset), data);
@@ -53,7 +53,7 @@ void WriteMemory(uintptr_t uOffset, const T& data)
 	//VirtualProtect(v_global_ptr, sizeof(T), oldProtect, &oldProtect);
 }
 
-inline static void OverwriteVftable(void* pObj, uintptr_t uVtblOffset)
+inline static void OverwriteVftable(void* pObj, std::uintptr_t uVtblOffset)
 {
 	*reinterpret_cast<void**>(pObj) = Memory::ReadPtr<void>(uVtblOffset);
 }

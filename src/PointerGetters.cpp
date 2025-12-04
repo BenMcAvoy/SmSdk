@@ -29,7 +29,7 @@
 
 /////////USEFUL MACROS
 
-#define GET_GLOBAL_PTR(type, val) *reinterpret_cast<type**>(uintptr_t(GetModuleHandle(NULL)) + val)
+#define GET_GLOBAL_PTR(type, val) *reinterpret_cast<type**>(std::uintptr_t(GetModuleHandle(NULL)) + val)
 
 #define PTR_GETTER_DEFINE(type, func_name, val) \
 	type* type::func_name() \

@@ -25,7 +25,7 @@ public:
 	/* 0x0010 */ btRigidBody* m_pDynamicsWorldRigidBody;
 	/* 0x0018 */ btRigidBody* m_pTickRaycastCollisionObject;
 	/* 0x0020 */ btCollisionObject* m_pInterpolatedRaycastCollisionObject;
-	/* 0x0028 */ int16_t m_iWorldId;
+	/* 0x0028 */ std::int16_t m_iWorldId;
 private:
 	/* 0x002A */ char pad_0x2A[0x6];
 }; // Size: 0x30

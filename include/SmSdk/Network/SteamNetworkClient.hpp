@@ -8,7 +8,7 @@ struct SteamNetworkClient : public NetworkClient
 private:
 	/* 0x0130 */ char pad_0x130[0x8];
 public:
-	/* 0x0138 */ int64_t m_iHostSteamId;
+	/* 0x0138 */ std::int64_t m_iHostSteamId;
 private:
 	/* 0x0140 */ char pad_0x140[0x78];
 public:

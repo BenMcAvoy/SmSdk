@@ -31,7 +31,7 @@ public:
 private:
 	virtual void func4() {}
 	virtual void func5(const std::string& str) { SMSDK_UNREF(str); }
-	virtual void func6(const std::string& str, int64_t a3) { SMSDK_UNREF2(str, a3); }
+	virtual void func6(const std::string& str, std::int64_t a3) { SMSDK_UNREF2(str, a3); }
 	virtual void func7(const std::string& str, const std::string& str2) { SMSDK_UNREF2(str, str2); }
 	virtual void func8(const std::string& str, const std::string& str2) { SMSDK_UNREF2(str, str2); }
 	virtual void func9(const std::string& str, const std::string& str2, const Json::Value& json_val) { SMSDK_UNREF3(str, str2, json_val); }
@@ -48,7 +48,7 @@ private:
 public:
 	/* 0x0020 */ std::function<void(void)> m_closeCallback;
 	/* 0x0060 */ std::unordered_map<std::string, std::function<void(void)>> m_mapEmptyFunctionCallbacks;
-	/* 0x00A0 */ std::unordered_map<std::string, std::function<void(int64_t)>> m_mapOneArgFunctionCallbacks;
+	/* 0x00A0 */ std::unordered_map<std::string, std::function<void(std::int64_t)>> m_mapOneArgFunctionCallbacks;
 	/* 0x00E0 */ std::unordered_map<std::string, std::function<void(const std::string&)>> m_mapStringToFunction;
 private:
 	/* 0x0120 */ char pad_0x120[0x80];

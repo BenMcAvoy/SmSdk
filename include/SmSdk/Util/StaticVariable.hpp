@@ -5,7 +5,7 @@
 #include <cstddef>
 #include <cstdint>
 
-template <typename T, uintptr_t uStaticOffset>
+template <typename T, std::uintptr_t uStaticOffset>
 class StaticVariable
 {
 public:

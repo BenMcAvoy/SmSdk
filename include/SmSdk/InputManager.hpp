@@ -32,9 +32,9 @@ enum EInputEventType : uint32_t
 
 struct MouseData
 {
-	/* 0x0000 */ int32_t m_x;
-	/* 0x0004 */ int32_t m_y;
-	/* 0x0008 */ int32_t m_scroll;
+	/* 0x0000 */ std::int32_t m_x;
+	/* 0x0004 */ std::int32_t m_y;
+	/* 0x0008 */ std::int32_t m_scroll;
 }; // Size: 0xC
 
 static_assert(sizeof(MouseData) == 0xC, "MouseData: Incorrect Size");
@@ -114,7 +114,7 @@ public:
 		return pInputManager->_isMouseButtonHeld(eBtn);
 	}
 
-	inline static int32_t GetMouseScrollDelta()
+	inline static std::int32_t GetMouseScrollDelta()
 	{
 		InputManager* pInputManager = InputManager::GetInstance();
 		if (!pInputManager)
@@ -125,7 +125,7 @@ public:
 private:
 	/* 0x0000 */ char pad_0x0[0xC];
 public:
-	/* 0x000C */ int32_t m_iCharacterCode;
+	/* 0x000C */ std::int32_t m_iCharacterCode;
 private:
 	/* 0x0010 */ char pad_0x10[0x18];
 public:

@@ -47,7 +47,7 @@ public:
 private:
 	/* 0x0058 */ char pad_0x58[0x10];
 public:
-	/* 0x0068 */ int32_t m_iMaxParentCount;
+	/* 0x0068 */ std::int32_t m_iMaxParentCount;
 private:
 	/* 0x006C */ char pad_0x6C[0x14];
 public:

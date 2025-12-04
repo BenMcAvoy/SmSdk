@@ -12,7 +12,7 @@ private:
 	/* 0x0000 */ char pad_0x0[0x8];
 public:
 	/* 0x0008 */ std::shared_ptr<SteamNetworkSend> m_pNetworkSend;
-	/* 0x0018 */ int32_t m_iConnectionState;
+	/* 0x0018 */ std::int32_t m_iConnectionState;
 private:
 	/* 0x001C */ char pad_0x1C[0x2C];
 	/* 0x0048 */ std::string m_someString1;

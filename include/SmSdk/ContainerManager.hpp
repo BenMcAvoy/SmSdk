@@ -6,8 +6,8 @@
 struct ContainerEntry
 {
 	/* 0x0000 */ boost::uuids::uuid m_itemUuid;
-	/* 0x0010 */ int32_t m_iItemId;
-	/* 0x0014 */ int32_t m_iItemQuantity;
+	/* 0x0010 */ std::int32_t m_iItemId;
+	/* 0x0014 */ std::int32_t m_iItemQuantity;
 }; // Size: 0x18
 
 static_assert(offsetof(ContainerEntry, ContainerEntry::m_itemUuid) == 0x0, "ContainerEntry::m_itemUuid: Incorrect offset");
@@ -43,8 +43,8 @@ public:
 private:
 	/* 0x0090 */ char pad_0x90[0x4];
 public:
-	/* 0x0094 */ int32_t m_iUpdateCounter;
-	/* 0x0098 */ int32_t m_iLastUpdateTick;
+	/* 0x0094 */ std::int32_t m_iUpdateCounter;
+	/* 0x0098 */ std::int32_t m_iLastUpdateTick;
 private:
 	/* 0x009C */ char pad_0x9C[0x34];
 public:

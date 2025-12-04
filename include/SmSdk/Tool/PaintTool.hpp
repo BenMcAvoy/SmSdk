@@ -25,8 +25,8 @@ static_assert(sizeof(PaintToolNetworkData) == 0x58, "PaintToolNetworkData: Incor
 
 struct PaintToolSelectionData
 {
-	/* 0x0000 */ int32_t m_iObjectId;
-	/* 0x0004 */ int32_t m_iObjectType;
+	/* 0x0000 */ std::int32_t m_iObjectId;
+	/* 0x0004 */ std::int32_t m_iObjectType;
 private:
 	/* 0x0008 */ DirectX::XMFLOAT3 m_someVector;
 public:
@@ -45,8 +45,8 @@ private:
 	/* 0x0548 */ char pad_0x548[0x8];
 public:
 	/* 0x0550 */ Color m_paintColor;
-	/* 0x0554 */ int32_t m_iLmbState;
-	/* 0x0558 */ int32_t m_iRmbState;
+	/* 0x0554 */ std::int32_t m_iLmbState;
+	/* 0x0558 */ std::int32_t m_iRmbState;
 private:
 	/* 0x055C */ char pad_0x55C[0x4];
 public:
@@ -58,7 +58,7 @@ public:
 private:
 	/* 0x0661 */ char pad_0x661[0x3];
 public:
-	/* 0x0664 */ int32_t m_iSelectedObjectId;
+	/* 0x0664 */ std::int32_t m_iSelectedObjectId;
 	/* 0x0668 */ DirectX::XMINT3 m_selectorPosition;
 private:
 	/* 0x0674 */ char pad_0x674[0xC];

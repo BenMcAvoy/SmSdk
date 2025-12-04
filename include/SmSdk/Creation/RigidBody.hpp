@@ -22,7 +22,7 @@ public:
 private:
 	/* 0x0028 */ char pad_0x28[0xC];
 public:
-	/* 0x0034 */ int16_t m_iWorldId;
+	/* 0x0034 */ std::int16_t m_iWorldId;
 private:
 	/* 0x0036 */ char pad_0x36[0xA];
 public:
